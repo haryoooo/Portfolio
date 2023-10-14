@@ -1,19 +1,15 @@
-<script setup>
-import { collection, getDocs } from "firebase/firestore";
-import TheWelcome from "../components/TheWelcome.vue";
-import { db } from "../firebase";
-import { onMounted } from "vue";
+<script>
+import Header from "../components/Header.vue";
 
-onMounted(async () => {
-  const querySnapshot = await getDocs(collection(db, "dataList"));
-  querySnapshot.forEach((el) => {
-    console.log(el.data());
-  });
-});
+export default {
+  name: "HomeView",
+  components: { Header },
+  props: ["value", "loading"],
+};
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <Header :value="value" :loading="loading" />
 </template>
+
+<style scoped></style>
