@@ -6,3 +6,8 @@
   padding: 2rem;
   font-weight: normal;
 }
+
+body {
+  background-color: black;
+  color: white;
+}

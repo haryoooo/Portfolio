@@ -1,13 +1,13 @@
 <script>
-import { RouterLink, RouterView } from "vue-router";
 import HomeView from "./views/HomeView.vue";
+import Navbar from "./components/Navbar.vue"
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "./firebase";
 import { ref } from "vue";
 
 export default {
   name: "App",
-  components: { HomeView },
+  components: { HomeView, Navbar },
   setup() {
     const headers = ref(null);
     const loading = ref(false);
@@ -34,12 +34,8 @@ export default {
 </script>
 
 <template>
+  <Navbar :value="value" :loading="loading" />
   <HomeView :value="headers" :loading="loading" />
-  <nav>
-    <!-- <RouterLink to="/">Home</RouterLink>
-    <RouterLink to="/about">About</RouterLink> -->
-  </nav>
-  <RouterView />
 </template>
 
 <style scoped></style>
