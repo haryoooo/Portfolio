@@ -1,6 +1,6 @@
 <script>
-import HomeView from "./views/HomeView.vue";
-import Navbar from "./components/Navbar.vue"
+import HomeView from "./views/HomeView.vue"
+import Navbar from "./components/Navbar.vue";;
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "./firebase";
 import { ref } from "vue";
@@ -34,7 +34,7 @@ export default {
 </script>
 
 <template>
-  <Navbar :value="value" :loading="loading" />
+  <Navbar />
   <HomeView :value="headers" :loading="loading" />
 </template>
 

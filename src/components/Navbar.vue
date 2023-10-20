@@ -3,15 +3,20 @@ import { RouterLink, RouterView } from "vue-router";
 
 export default {
     name: 'Navbar',
-    props: ['value']
 }
 </script>
 <template>
-    <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/projects">Projects</RouterLink>
-        <RouterLink to="/skills">Skills</RouterLink>
-    </nav>
-    <RouterView />
+    <div class="flex justify-between">
+        <div class="self-center">
+            <h1 class="font-bold text-xl">HARYO</h1>
+        </div>
+        <div class="flex justify-end m-5">
+            <RouterLink class="m-5" to="/">Home</RouterLink>
+            <RouterLink class="m-5" to="/skills">Skills</RouterLink>
+            <RouterLink class="m-5" to="/projects">Projects</RouterLink>
+            <RouterLink class="m-5" to="/testimony">Testimony</RouterLink>
+        </div>
+        <RouterView />
+    </div>
 </template>
 <style scoped></style>

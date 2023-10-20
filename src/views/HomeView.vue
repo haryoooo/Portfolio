@@ -1,15 +1,17 @@
 <script>
-import Header from "../components/Header.vue";
+import Headers from "../components/Header.vue";
+import Projects from "../components/Projects.vue";
 
 export default {
   name: "HomeView",
-  components: { Header },
+  components: { Headers, Projects },
   props: ["value", "loading"],
 };
 </script>
 
 <template>
-  <Header :value="value" :loading="loading" />
+  <Headers :value="value" :loading="loading" />
+  <Projects :value="value" :loading="loading" />
 </template>
 
 <style scoped></style>

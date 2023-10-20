@@ -1,20 +1,18 @@
 <script>
+import Card from "../components/CardProjects.vue";
+
 export default {
     name: "Projects",
-    props: ["value", "loading"],
+    components: { Card },
+    props: ["value", "loading"]
 };
 </script>
 
 <template>
-    {{ console.log(value) }}
-    <div>My Projects</div>
-    <div class="flex flex-start mt-5">
-        <div class="w-32 h-32 cursor-pointer">
-            <img src="../assets//icons//button-talk.png" alt="talk" />
-        </div>
-        <div class="w-32 h-32 ml-2 cursor-pointer">
-            <img src="../assets//icons//button-linkedin.png" alt="linkedin" />
-        </div>
+    {{ console.log("val", value) }}
+    <div class="text-xl font-bold">Featured Projects</div>
+    <div class="flex flex-start mt-5" v-for="val in value?.projects">
+        <Card :element="val" />
     </div>
 </template>
 
