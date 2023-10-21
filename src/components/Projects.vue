@@ -9,10 +9,13 @@ export default {
 </script>
 
 <template>
-    {{ console.log("val", value) }}
-    <div class="text-xl font-bold">Featured Projects</div>
-    <div class="flex flex-start mt-5" v-for="val in value?.projects">
-        <Card :element="val" />
+    <div class="my-10">
+        <div class="text-xl font-bold my-5">Featured Projects</div>
+        <div class="flex flex-row flex-wrap flex-start mt-5">
+            <div class="mr-5" v-for="val in value?.projects">
+                <Card :element="val" />
+            </div>
+        </div>
     </div>
 </template>
 

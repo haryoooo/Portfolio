@@ -8,7 +8,7 @@ export default {
 <template>
     <div class="flex justify-between">
         <div class="self-center">
-            <h1 class="font-bold text-xl">HARYO</h1>
+            <h1 class="font-bold text-xl">HARYO PORTOFOLIO</h1>
         </div>
         <div class="flex justify-end m-5">
             <RouterLink class="m-5" to="/">Home</RouterLink>
